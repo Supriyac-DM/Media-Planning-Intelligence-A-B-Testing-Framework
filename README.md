@@ -37,7 +37,7 @@ Instead of using "magic numbers," this model derives the safety constant ($K$) f
 
 * **Confidence ($1-\alpha$):** Protection against False Positives (Type I Error).
 * **Power ($1-\beta$):** Protection against False Negatives (Type II Error).
-* **Derivation:** Uses `NORM.S.INV` logic to map Z-Scores, ensuring the model scales for high-stakes medical ads (99% confidence) or fast creative tests (80% confidence).
+* **Derivation:** Uses `NORM.S.INV` logic to map Z-Scores, ensuring the model scales for high-stakes ads (99% confidence) or fast creative tests (80% confidence).
 
 ---
 
