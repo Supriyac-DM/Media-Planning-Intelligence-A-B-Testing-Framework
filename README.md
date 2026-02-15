@@ -4,7 +4,6 @@
 
 Most A/B tests fail because they are "underpowered" meaning the budget was too small to ever prove a win. This framework moves beyond basic calculators to provide a **Financial Engineering** approach to media testing. It calculates the literal cost and time required to achieve statistical significance before you spend a single dollar.
 
----
 
 ## 🚀 Key Modules
 
