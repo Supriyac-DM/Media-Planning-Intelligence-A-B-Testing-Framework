@@ -31,7 +31,30 @@ Input your **Target Lift** (e.g., 15%) and the model outputs:
 * **Budget Required:** Total investment based on historical CPC.
 * **Days to Significance:** Duration based on historical traffic velocity.
 
+### **1. The Dynamic "16-Rule" Generator**
+
+Instead of using "magic numbers," this model derives the safety constant ($K$) from the Standard Normal Distribution.
+
+* **Confidence ($1-\alpha$):** Protection against False Positives (Type I Error).
+* **Power ($1-\beta$):** Protection against False Negatives (Type II Error).
+* **Derivation:** Uses `NORM.S.INV` logic to map Z-Scores, ensuring the model scales for high-stakes medical ads (99% confidence) or fast creative tests (80% confidence).
+
 ---
+
+## 🛠️ The Core Methodology
+
+The framework utilizes the standard sample size formula for a two-proportion z-test to ensure statistical power:
+
+$$n = \frac{K \cdot p(1-p)}{(p \cdot \text{MDE})^2}$$
+
+**Where:**
+* **$K$**: The calculated statistical constant (Standard 95%/80% is **15.7**).
+* **$p$**: Your historical Baseline Conversion Rate.
+* **$\text{MDE}$**: Your Minimum Detectable Effect (Relative).
+
+To solve for the **Reverse MDE** (What your budget can afford), we use:
+
+$$\text{Possible MDE} = \frac{\sqrt{\frac{K \cdot p(1-p)}{n}}}{p}$$
 
 ## 📈 Strategic Decision Engine
 
